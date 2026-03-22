@@ -1,0 +1,34 @@
+
+payload:
+  # ── Основные домены ──
+  - DOMAIN-SUFFIX,linkedin.com
+  - DOMAIN-SUFFIX,linkedin.at
+  - DOMAIN-SUFFIX,linkedin.cn
+
+  # ── CDN для медиа и статики ──
+  - DOMAIN-SUFFIX,licdn.com
+  - DOMAIN-SUFFIX,licdn.cn
+
+  # ── Короткие ссылки ──
+  - DOMAIN-SUFFIX,lnkd.in
+
+  # ── SlideShare (принадлежит LinkedIn) ──
+  - DOMAIN-SUFFIX,slideshare.com
+  - DOMAIN-SUFFIX,slideshare.net
+  - DOMAIN-SUFFIX,slidesharecdn.com
+
+  # ── Аналитика LinkedIn ──
+  - DOMAIN-SUFFIX,bizographics.com
+
+  # ── Platform и CDN домены ──
+  - DOMAIN,linkedin.sc.omtrdc.net
+  - DOMAIN,licdn.cn.cdn20.com
+  - DOMAIN,e122475.dscg.akamaiedge.net
+  - DOMAIN,l-0005.dc-msedge.net
+  - DOMAIN,l-0005.l-msedge.net
+
+  # ── LinkedIn IP-диапазоны (AS14413) ──
+  # no-resolve обязателен при fake-ip: не пытаться резолвить домен для IP-матча
+  - IP-CIDR,108.174.0.0/20,no-resolve
+  - IP-CIDR,144.2.0.0/16,no-resolve
+  - IP-CIDR,103.20.92.0/22,no-resolve

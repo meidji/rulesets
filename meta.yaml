@@ -1,0 +1,96 @@
+
+payload:
+
+  # ════════════════════════════════════════════════
+  #  INSTAGRAM
+  # ════════════════════════════════════════════════
+
+  # ── Основные домены ──
+  - DOMAIN-SUFFIX,instagram.com
+  - DOMAIN-SUFFIX,instagram.net
+  - DOMAIN-SUFFIX,cdninstagram.com
+
+  # ── Static / CDN (фото, видео, reels) ──
+  - DOMAIN-SUFFIX,scontent.cdninstagram.com
+  - DOMAIN-SUFFIX,scontent-ams4-1.cdninstagram.com
+  - DOMAIN-KEYWORD,scontent-
+
+  # ── API & upload ──
+  - DOMAIN,i.instagram.com
+  - DOMAIN,api.instagram.com
+  - DOMAIN,graph.instagram.com
+  - DOMAIN,upload.instagram.com
+
+  # ════════════════════════════════════════════════
+  #  FACEBOOK
+  # ════════════════════════════════════════════════
+
+  # ── Основные домены ──
+  - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,facebook.net
+  - DOMAIN-SUFFIX,fb.com
+  - DOMAIN-SUFFIX,fb.me
+  - DOMAIN-SUFFIX,fbcdn.net
+
+  # ── CDN для медиа (фото, видео) ──
+  - DOMAIN-SUFFIX,scontent.fbcdn.net
+  - DOMAIN-SUFFIX,scontent.xx.fbcdn.net
+  - DOMAIN-KEYWORD,scontent.f
+
+  # ── Статика и ресурсы ──
+  - DOMAIN-SUFFIX,static.xx.fbcdn.net
+  - DOMAIN-SUFFIX,z-m.facebook.com
+
+  # ── Facebook API ──
+  - DOMAIN,graph.facebook.com
+  - DOMAIN,api.facebook.com
+
+  # ── Messenger (веб) ──
+  - DOMAIN-SUFFIX,messenger.com
+  - DOMAIN,www.messenger.com
+
+  # ── Auth & Login ──
+  - DOMAIN,login.facebook.com
+  - DOMAIN,m.facebook.com
+  - DOMAIN,web.facebook.com
+  - DOMAIN,connect.facebook.net
+
+  # ════════════════════════════════════════════════
+  #  ОБЩАЯ ИНФРАСТРУКТУРА META
+  # ════════════════════════════════════════════════
+
+  # ── Meta домен (единый бренд) ──
+  - DOMAIN-SUFFIX,meta.com
+  - DOMAIN-SUFFIX,metaplatforms.com
+
+  # ── Workplace by Meta ──
+  - DOMAIN-SUFFIX,workplace.com
+
+  # ── WhatsApp (на случай если понадобится позже) ──
+  # - DOMAIN-SUFFIX,whatsapp.com
+  # - DOMAIN-SUFFIX,whatsapp.net
+
+  # ── Meta AI ──
+  - DOMAIN-SUFFIX,meta.ai
+
+  # ── Аналитика и пиксель ──
+  - DOMAIN-SUFFIX,edge-chat.facebook.com
+  - DOMAIN,an.facebook.com
+  - DOMAIN,pixel.facebook.com
+
+  # ── IP-диапазоны Meta (AS32934 / AS63293) ──
+  - IP-CIDR,31.13.24.0/21,no-resolve
+  - IP-CIDR,31.13.64.0/18,no-resolve
+  - IP-CIDR,45.64.40.0/22,no-resolve
+  - IP-CIDR,66.220.144.0/20,no-resolve
+  - IP-CIDR,69.63.176.0/20,no-resolve
+  - IP-CIDR,69.171.224.0/19,no-resolve
+  - IP-CIDR,74.119.76.0/22,no-resolve
+  - IP-CIDR,102.132.96.0/20,no-resolve
+  - IP-CIDR,103.4.96.0/22,no-resolve
+  - IP-CIDR,129.134.0.0/17,no-resolve
+  - IP-CIDR,157.240.0.0/17,no-resolve
+  - IP-CIDR,173.252.64.0/18,no-resolve
+  - IP-CIDR,179.60.192.0/22,no-resolve
+  - IP-CIDR,185.60.216.0/22,no-resolve
+  - IP-CIDR,204.15.20.0/22,no-resolve

@@ -1,0 +1,52 @@
+
+payload:
+  # ── Core NotebookLM ──
+  - DOMAIN-SUFFIX,notebooklm.google
+  - DOMAIN-SUFFIX,notebooklm.google.com
+
+  # ── Google Auth & Accounts ──
+  - DOMAIN-SUFFIX,accounts.google.com
+  - DOMAIN-SUFFIX,myaccount.google.com
+  - DOMAIN-SUFFIX,notifications.google.com
+
+  # ── Google APIs (Gemini, Discovery Engine и др.) ──
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,clients6.google.com
+
+  # ── Google Static Resources & Fonts ──
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,fonts.googleapis.com
+
+  # ── Google Tag Manager & Analytics ──
+  - DOMAIN-SUFFIX,googletagmanager.com
+  - DOMAIN-SUFFIX,google-analytics.com
+
+  # ── Google APIs JS SDK ──
+  - DOMAIN-SUFFIX,apis.google.com
+
+  # ── Google Workspace (Docs, Slides import) ──
+  - DOMAIN-SUFFIX,docs.google.com
+  - DOMAIN-SUFFIX,drive.google.com
+  - DOMAIN-SUFFIX,slides.google.com
+  - DOMAIN-SUFFIX,classroom.google.com
+
+  # ── Google User Content (загруженные файлы, превью) ──
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,ggpht.com
+  - DOMAIN-SUFFIX,lh3.googleusercontent.com
+
+  # ── YouTube (импорт источников из YouTube) ──
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,googlevideo.com
+
+  # ── Google Cloud / Vertex AI backend ──
+  - DOMAIN-SUFFIX,cloud.google.com
+  - DOMAIN-SUFFIX,appspot.com
+
+  # ── reCAPTCHA / Security ──
+  - DOMAIN-SUFFIX,recaptcha.net
+  - DOMAIN,www.google.com
+
+  # ── Google policies & consent ──
+  - DOMAIN-SUFFIX,policies.google.com

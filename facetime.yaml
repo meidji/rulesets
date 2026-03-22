@@ -1,0 +1,34 @@
+
+payload:
+  # ── Основные домены FaceTime ──
+  - DOMAIN-SUFFIX,facetime.apple.com
+  - DOMAIN,facetime.apple.com
+
+  # ── Relay и STUN серверы Apple (используются FaceTime для установки соединения) ──
+  - DOMAIN-SUFFIX,relay.apple.com
+  - DOMAIN-SUFFIX,stun.apple.com
+  - DOMAIN-SUFFIX,nstat.apple.com
+
+  # ── Регистрация и пуш-уведомления FaceTime ──
+  - DOMAIN-SUFFIX,push.apple.com
+  - DOMAIN-SUFFIX,courier.push.apple.com
+  - DOMAIN-SUFFIX,bag.itunes.apple.com
+
+  # ── Apple ID (авторизация FaceTime) ──
+  - DOMAIN-SUFFIX,appleid.apple.com
+  - DOMAIN-SUFFIX,idmsa.apple.com
+  - DOMAIN-SUFFIX,gsa.apple.com
+
+  # ── iMessage (интегрирован с FaceTime) ──
+  - DOMAIN-SUFFIX,imessage.apple.com
+
+  # ── CDN и инфраструктура ──
+  - DOMAIN-SUFFIX,applelink.apple.com
+  - DOMAIN-SUFFIX,api.apple-cloudkit.com
+
+  # ── Apple IP-диапазоны (AS714) ──
+  # Покрывают relay/TURN серверы и P2P fallback Apple.
+  # no-resolve обязателен при fake-ip: не пытаться резолвить домен для IP-матча.
+  - IP-CIDR,17.0.0.0/8,no-resolve
+  - IP-CIDR,17.172.224.0/19,no-resolve
+  - IP-CIDR,17.57.144.0/22,no-resolve
