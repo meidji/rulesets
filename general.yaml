@@ -1,0 +1,112 @@
+# behavior: classical
+# Mihomo/Clash Verge Rev поддерживает classical behavior с fake-ip:
+# фейковый IP → восстановление домена → проверка по этому ruleset'у.
+# IP-CIDR с no-resolve применяются только к реальному трафику (не fake-ip).
+
+payload:
+
+  # ════════════════════════════════════════
+  # ProxyLine
+  # ════════════════════════════════════════
+  - DOMAIN-SUFFIX,proxyline.net
+
+  # ════════════════════════════════════════
+  # FaceTime
+  # ════════════════════════════════════════
+
+  # ── Основные домены ──
+  - DOMAIN-SUFFIX,facetime.apple.com
+  - DOMAIN,facetime.apple.com
+
+  # ── Relay и STUN серверы Apple ──
+  - DOMAIN-SUFFIX,relay.apple.com
+  - DOMAIN-SUFFIX,stun.apple.com
+  - DOMAIN-SUFFIX,nstat.apple.com
+
+  # ── Регистрация и пуш-уведомления ──
+  - DOMAIN-SUFFIX,push.apple.com
+  - DOMAIN-SUFFIX,courier.push.apple.com
+  - DOMAIN-SUFFIX,bag.itunes.apple.com
+
+  # ── Apple ID (авторизация FaceTime) ──
+  - DOMAIN-SUFFIX,appleid.apple.com
+  - DOMAIN-SUFFIX,idmsa.apple.com
+  - DOMAIN-SUFFIX,gsa.apple.com
+
+  # ── iMessage (интегрирован с FaceTime) ──
+  - DOMAIN-SUFFIX,imessage.apple.com
+
+  # ── CDN и инфраструктура ──
+  - DOMAIN-SUFFIX,applelink.apple.com
+  - DOMAIN-SUFFIX,api.apple-cloudkit.com
+
+  # ── Apple IP-диапазоны (AS714) ──
+  # Покрывают relay/TURN серверы и P2P fallback.
+  - IP-CIDR,17.0.0.0/8,no-resolve
+  - IP-CIDR,17.172.224.0/19,no-resolve
+  - IP-CIDR,17.57.144.0/22,no-resolve
+
+  # ════════════════════════════════════════
+  # Telegram
+  # ════════════════════════════════════════
+  # Telegram хардкодит IP серверов в клиенте — доменные правила не работают
+  # для десктопного/мобильного клиента. Покрываем через IP-CIDR по AS62041.
+  # Доменные правила нужны только для web.telegram.org.
+
+  # ── Веб-версия ──
+  - DOMAIN-SUFFIX,telegram.org
+  - DOMAIN-SUFFIX,telegram.me
+  - DOMAIN-SUFFIX,telegra.ph
+  - DOMAIN-SUFFIX,t.me
+  - DOMAIN-SUFFIX,tg.dev
+  - DOMAIN-SUFFIX,telesco.pe
+
+  # ── CDN и медиа ──
+  - DOMAIN-SUFFIX,cdn.telegram.org
+  - DOMAIN-SUFFIX,cdn1.telegram.org
+  - DOMAIN-SUFFIX,cdn2.telegram.org
+  - DOMAIN-SUFFIX,cdn3.telegram.org
+  - DOMAIN-SUFFIX,cdn4.telegram.org
+  - DOMAIN-SUFFIX,cdn5.telegram.org
+
+  # ── Telegram IP-диапазоны (AS62041 + смежные) ──
+  - IP-CIDR,91.108.4.0/22,no-resolve
+  - IP-CIDR,91.108.8.0/22,no-resolve
+  - IP-CIDR,91.108.12.0/22,no-resolve
+  - IP-CIDR,91.108.16.0/22,no-resolve
+  - IP-CIDR,91.108.56.0/22,no-resolve
+  - IP-CIDR,149.154.160.0/20,no-resolve
+  - IP-CIDR,149.154.164.0/22,no-resolve
+  - IP-CIDR,149.154.168.0/22,no-resolve
+  - IP-CIDR,149.154.172.0/22,no-resolve
+
+  # ════════════════════════════════════════
+  # RuTracker
+  # ════════════════════════════════════════
+
+  # ── Основной домен ──
+  - DOMAIN-SUFFIX,rutracker.org
+
+  # ── Зеркала ──
+  - DOMAIN-SUFFIX,rutracker.cc
+  - DOMAIN-SUFFIX,rutracker.net
+  - DOMAIN-SUFFIX,rutracker.nl
+  - DOMAIN-SUFFIX,rutracker.lib
+
+  # ── Статика / CDN ──
+  - DOMAIN,static.rutracker.cc
+  - DOMAIN,bt.rutracker.org
+  - DOMAIN,bt2.rutracker.org
+  - DOMAIN,bt3.rutracker.org
+  - DOMAIN,bt4.rutracker.org
+
+  # ── Почта трекера ──
+  - DOMAIN,mail.rutracker.org
+
+  # ════════════════════════════════════════
+  # Misc IP
+  # ════════════════════════════════════════
+  # /32 = точный хост. Порт на уровне ruleset не задаётся —
+  # весь трафик на этот IP идёт через прокси.
+  - IP-CIDR,154.81.196.144/32,no-resolve
+  - IP-CIDR,92.119.161.11/32,no-resolve
