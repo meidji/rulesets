@@ -137,3 +137,27 @@ payload:
   # pq.hosting
   # ════════════════════════════════════════
   - DOMAIN-SUFFIX,pq.hosting
+
+  # ════════════════════════════════════════
+  # Coursera
+  # ════════════════════════════════════════
+  # Основной домен покрывает web, api, accounts, learner и пр. субдомены.
+  # d3c33hcgiwev3.cloudfront.net — CloudFront CDN для видео Coursera.
+  # Остальные хэши cloudfront.net добавлять не нужно — они не Coursera-специфичны.
+
+  # ── Основной домен ──
+  - DOMAIN-SUFFIX,coursera.org
+
+  # ── Видео CDN ──
+  - DOMAIN,d3c33hcgiwev3.cloudfront.net
+
+  # ════════════════════════════════════════
+  # Nebius
+  # ════════════════════════════════════════
+  # nebius.com   — сайт, консоль (console.eu.nebius.com, studio.nebius.com)
+  # nebius.ai    — AI Studio API (api.studio.nebius.ai)
+  # nebius.cloud — все gRPC API endpoints (*.api.nebius.cloud)
+
+  - DOMAIN-SUFFIX,nebius.com
+  - DOMAIN-SUFFIX,nebius.ai
+  - DOMAIN-SUFFIX,nebius.cloud
